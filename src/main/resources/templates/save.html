@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>save</title>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    
+    <form action="/member/save" method="post">
+        <label for="memId">아이디:</label>
+        <input type="text" id="memId" name="memId" required><br>
+        
+        <label for="memPw">비밀번호:</label>
+        <input type="password" id="memPw" name="memPw" required><br>
+        
+        <label for="memName">이름:</label>
+        <input type="text" id="memName" name="memName" required><br>
+        
+        <label for="memBirth">생년월일:</label>
+        <input type="date" id="memBirth" name="memBirth"><br>
+        
+        <label for="memPhone">전화번호:</label>
+        <input type="text" id="memPhone" name="memPhone"><br>
+        
+        <label for="memEmail">이메일:</label>
+        <input type="text" id="memEmail" name="memEmail">
+        <label for="memDomain"></label>
+        <!-- <input type="text" id="memDomain" name="memDomain" class="form_w200" value="" title="이메일 도메인" placeholder="이메일 도메인" maxlength="18"/> --> 
+<select class="select" title="이메일 도메인" id="memDomain" name="memDomain">
+    <option value="">-선택-</option>
+    <option value="naver.com">naver.com</option>
+    <option value="gmail.com">gmail.com</option>
+    <option value="hanmail.net">hanmail.net</option>
+    <option value="hotmail.com">hotmail.com</option>
+    <option value="korea.com">korea.com</option>
+    <option value="nate.com">nate.com</option>
+    <option value="yahoo.com">yahoo.com</option>
+</select><br>
+        <button type="submit">가입</button>
+        <button type="reset">리셋</button><br>
+    </form>
+</body>
+</html>

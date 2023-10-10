@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+</head>
+<body>
+   <h2>HELLO SPRING</h2>
+  	<a href="/security/create/token">로그인 (JWT)  </a>	
+	<br>
+	<h2>==============</h2>
+	<h1>Kakao Login Test</h1>
+	<span th:if="${userid==null}">
+		<a href="/member/save">회원가입</a>
+   		<a href="/member/login">로그인</a><br>
+		<a href="https://kauth.kakao.com/oauth/authorize?client_id=b4e15198a92c66541e626d75b50f81ec&redirect_uri=http://localhost:8081/login&response_type=code"><br>
+			<img src = "img/kakao_login_medium_narrow.png">
+		</a>
+	</span>
+	<span th:if="${userid!=null}">
+		<form name="logout" action="http://localhost:8081/logout">
+			<a href="/mypage">마이페이지</a>
+			<input type="submit" value="로그아웃">
+		</form>
+	</span>
+</body>
+</html>

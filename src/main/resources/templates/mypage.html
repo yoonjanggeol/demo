@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <meta charset="UTF-8">
+   <title>마이페이지</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!-- 메타 정보 및 스타일시트 링크 등의 설정 -->
+</head>
+<body>
+
+   
+    <!-- 사이드바 또는 메뉴바 -->
+    <div class="sidebar">
+    <h2>안녕하세요 <span th:text="${loginid}"></span>님</h2>
+        <ul>
+            <li>
+                <a href="#">예메/구매내역</a>
+                <ul class="dropdown">
+                    <li><a href="#">예매내역</a></li>
+                    <li><a href="#">구매내역</a></li>
+                    <!-- 다른 서브메뉴 항목들 -->
+                </ul>
+            </li>
+            <li>
+                <a href="#">내 쿠폰</a>
+                <!-- 다른 메뉴 항목들 -->
+            </li>
+            <li>
+                <a href="#">내 포인트</a>
+                <!-- 다른 메뉴 항목들 -->
+            </li>
+            <li>
+                <a href="#">작성한 관람평</a>
+                <!-- 다른 메뉴 항목들 -->
+            </li>
+            <li>
+                <a href="#">좋아요한 목록</a>
+                <!-- 다른 메뉴 항목들 -->
+            </li>
+            <li>
+                <a href="#">내 문의내역</a>
+                <!-- 다른 메뉴 항목들 -->
+            </li>
+            <li>
+                <a href="#">내 정보수정</a>
+                <!-- 다른 메뉴 항목들 -->
+            </li>
+            <!-- 다른 메뉴 항목들 -->
+        </ul>
+    </div>
+    
+    <!-- 메인 콘텐츠 -->
+    <div class="main-content">
+        <!-- 마이페이지 내용 -->
+    </div>
+</body>
+</html>

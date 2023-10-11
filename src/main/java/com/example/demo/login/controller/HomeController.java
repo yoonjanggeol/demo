@@ -14,9 +14,9 @@ import jakarta.servlet.http.HttpSession;
 public class HomeController {
    
    
-   @GetMapping("/")
+   @GetMapping("/member")
    public String index() { 
-      return "index";
+      return "Login/index";
    }
    KakaoAPI kakaoApi = new KakaoAPI();
 	

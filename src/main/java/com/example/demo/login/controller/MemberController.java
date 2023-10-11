@@ -23,7 +23,7 @@ public class MemberController {
    //회원가입 페이지 출력 요청
    @GetMapping("/member/save")
    public String saveForm() {
-      return "save";
+      return "/Login/save";
    }
    
    @PostMapping("/member/save")
@@ -32,12 +32,12 @@ public class MemberController {
 //      System.out.println("memID확인용 =" + memId); 확인완료
       System.out.println("회원가입정보확인" + memberDTO);
       memberService.save(memberDTO);
-      return "login";
+      return "Login/login";
    }
    
    @GetMapping("/member/login")
    public String loginForm() {
-      return "login";
+      return "Login/login";
    }
    
    @PostMapping("/member/login")
@@ -48,11 +48,11 @@ public class MemberController {
          
          session.setAttribute("loginid", loginResult.getMemId());
          System.out.println("loginid "+loginResult.getMemId());
-         return "main";
+         return "Login/main";
       }else {
          // login 실패
          System.out.println("로그인실패");
-         return "login";
+         return "Login/login";
       }
    }
       @GetMapping("/mypage")
@@ -64,12 +64,12 @@ public class MemberController {
            model.addAttribute("loginid", username);
            
            // mypage 템플릿으로 이동
-           return "mypage";
+           return "Login/mypage";
        }
       
       @GetMapping("/member/logout")
       public String logout(HttpSession session) {
     	  session.invalidate();
-    	  return "index";
+    	  return "Login/index";
       }
 }

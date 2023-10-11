@@ -13,8 +13,8 @@
 	<span th:if="${userid==null}">
 		<a href="/member/save">회원가입</a>
    		<a href="/member/login">로그인</a><br>
-		<a href="https://kauth.kakao.com/oauth/authorize?client_id=b4e15198a92c66541e626d75b50f81ec&redirect_uri=http://localhost:8081/login&response_type=code"><br>
-			<img src = "img/kakao_login_medium_narrow.png">
+		<a href="https://kauth.kakao.com/oauth/authorize?client_id=b4e15198a92c66541e626d75b50f81ec&redirect_uri=http://localhost:8080/login&response_type=code"><br>
+			<img src = "Login/img/kakao_login_medium_narrow.png">
 		</a>
 	</span>
 	<span th:if="${userid!=null}">
@@ -23,5 +23,10 @@
 			<input type="submit" value="로그아웃">
 		</form>
 	</span>
+	
+	<br>
+	<a href="/">메인으로</a>
+
+
 </body>
 </html>
